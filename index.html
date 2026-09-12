@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OPG Brađašević - Uzgoj i prodaja domaćih slavonskih šljiva i šljivovice iz Dragalića kod Nove Gradiške.">
+    <title>OPG Brađašević | Domaće Slavonske Šljive & Šljivovica</title>
+    
+    <!-- Povezivanje odvojenog CSS-a iz css mape -->
+    <link rel="stylesheet" href="css/stil.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>OPG Brađašević</h1>
+                <span class="tagline">Dragalić • Nova Gradiška</span>
+            </div>
+            
+            <!-- SEMANTIČKI ELEMENT: <nav> -->
+            <nav class="main-nav">
+                <button class="menu-toggle" id="mobileMenuBtn" aria-label="Otvori izbornik">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#pocetna" class="nav-link active" onclick="showPage('pocetna')">Početna</a></li>
+                    <li><a href="#o-nama" class="nav-link" onclick="showPage('o-nama')">O nama</a></li>
+                    <li><a href="#proizvodi" class="nav-link" onclick="showPage('proizvodi')">Proizvodi & Cjenik</a></li>
+                    <li><a href="#kontakt" class="nav-link" onclick="showPage('kontakt')">Kontakt & Narudžba</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container content-area">
+
+        
+        <!-- SEMANTIČKI ELEMENT: <section> -->
+        <section id="pocetna" class="page-section active-page">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Tradicija uzgoja slavonske šljive</h2>
+                    <p>Dobrodošli na službene stranice OPG-a Brađašević. Iz srca Slavonije, s naših osunčanih voćnjaka u Dragaliću pokraj Nove Gradiške, donosimo vam najslađe domaće šljive i tradicijski spravljenu šljivovicu.</p>
+                    
+                   
+                    <div class="hero-buttons">
+                        <a href="#akcija" class="btn btn-primary">Sezonska Ponuda</a>
+                        <a href="#kontakt" class="btn btn-secondary" onclick="showPage('kontakt')">Naruči Odmah</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    
+                    <img src="https://images.unsplash.com/photo-1522184216316-3c251b230f6c?auto=format&fit=crop&w=800&q=80" alt="Šljivik OPG-a Brađašević u Dragaliću">
+                </div>
+            </div>
+
+            
+            <div id="akcija" class="promo-box">
+                <h3>Sezona šljiva 2026. je u punom jeku!</h3>
+                <p>Nudimo svježe ubrane šljive vrhunske kvalitete za konzumaciju i preradu. Sorte Čačanska rodna, Čačanska ljepotica i Stanley nudimo po jedinstvenoj cijeni od <strong>0,70 €/kg</strong>.</p>
+                <p><small>*Moguće osobno preuzimanje na imanju u Dragaliću ili dostava po dogovoru za veće količine.</small></p>
+            </div>
+
+            <div class="grid-3 mt-4">
+                <div class="card">
+                    <!-- SLIKA KOD "OSUNČANI VOĆNJACI": SLIKA ŠLJIVIKA -->
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Osunčani voćnjak šljiva u Slavoniji">
+                    <h3>Osunčani Voćnjaci</h3>
+                    <p>Plodna slavonska zemlja i idealna mikroklima Dragalića osiguravaju visoku razinu prirodnog šećera u svakom plodu.</p>
+                </div>
+                <div class="card">
+                    <!-- SLIKA KOD "RUČNA BERBA": SLIKA PLODOVA ŠLJIVA -->
+                    <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=600&q=80" alt="Svježi plodovi sočne šljive">
+                    <h3>Ručna Berba</h3>
+                    <p>Svaki plod pažljivo beremo ručno u optimalnom stadiju zrelosti kako bismo sačuvali svježinu i puninu okusa.</p>
+                </div>
+                <div class="card">
+                    <!-- ZADNJA SLIKA KOD "TRADICIJSKA RAKIJA": SLIKA RAKIJE/ŠLJIVOVICE -->
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Domaća slavonska šljivovica">
+                    <h3>Tradicijska Rakija</h3>
+                    <p>Naša šljivovica (12,00 €/L) peče se po starinskoj slavonskoj recepturi u bakrenim kotlovima bez dodanog šećera.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= STRANICA 2: O NAMA ================= -->
+        <section id="o-nama" class="page-section">
+            <div class="page-title">
+                <h2>O našem OPG-u</h2>
+                <p>Upoznajte obitelj Brađašević i našu strast prema voćarstvu</p>
+            </div>
+
+            <div class="about-content">
+                <!-- SEMANTIČKI ELEMENT: <article> -->
+                <article class="about-text">
+                    <h3>Obiteljsko imanje iz Dragalića</h3>
+                    <p>OPG Brađašević smješten je u mirnom slavonskom selu Dragalić, nedaleko od Nove Gradiške. Već generacijama naša se obitelj bavi poljoprivredom, a posljednjih desetljeća usmjerili smo svu svoju ljubav i znanje u uzgoj najkvalitetnijih sorata šljiva.</p>
+                    <p>Vjerujemo u prirodni uzgoj uz minimalnu primjenu zaštitnih sredstava, usmjeravajući se na ekološku održivost i očuvanje plodnosti naše slavonske ravnice.</p>
+
+                    <h4 class="mt-4">Zašto odabrati plodove OPG Brađašević?</h4>
+                    <!-- ELEMENT LISTE -->
+                    <ul class="custom-list">
+                        <li><strong>Lokalni uzgoj:</strong> 100% domaći proizvod iz Dragalića (Nova Gradiška).</li>
+                        <li><strong>Vrhunska kvaliteta:</strong> Plodovi bogati šećerom, idealni za jelo, pekmeze i rakiju.</li>
+                        <li><strong>Povoljna cijena:</strong> Izravna prodaja s voćnjaka po cijeni od 0,70 €/kg.</li>
+                        <li><strong>Tradicijski pristup:</strong> Prerada šljiva u rakiju po receptima naših djedova.</li>
+                    </ul>
+                </article>
+
+                <aside class="about-sidebar">
+                    <div class="info-card">
+                        <h4>Brzi Podaci</h4>
+                        <p><strong>Lokacija:</strong> Dragalić, Brodsko-posavska županija</p>
+                        <p><strong>Glavne sorte:</strong> Čačanska rodna, Čačanska ljepotica, Stanley</p>
+                        <p><strong>Proizvodi:</strong> Svježa šljiva i Domaća šljivovica</p>
+                        <p><strong>Udaljenost:</strong> 8 km od Nove Gradiške</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ================= STRANICA 3: PROIZVODI & CJENIK ================= -->
+        <section id="proizvodi" class="page-section">
+            <div class="page-title">
+                <h2>Naši Proizvodi & Cjenik</h2>
+                <p>Pregledajte ponudu svježih sorata šljiva i domaće rakije</p>
+            </div>
+
+            <p class="mb-3">Sve naše sorte šljiva uzgojene su na imanju u Dragaliću te ih nudimo po pristupačnoj cijeni od <strong>0,70 € po kilogramu</strong>. Uz svježe voće, ponosni smo i na našu pravu slavonsku šljivovicu.</p>
+
+            
+            <div class="table-responsive">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Proizvod / Sorta</th>
+                            <th>Opis i Namjena</th>
+                            <th>Pakiranje / Mjera</th>
+                            <th>Cijena (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Čačanska rodna</strong></td>
+                            <td>Slatka i sočna sorta, tamno plave boje. Izvrsna za konzumaciju, kolače i izradu domaćeg pekmeza.</td>
+                            <td>kg</td>
+                            <td class="price-cell">0,70 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Čačanska ljepotica</strong></td>
+                            <td>Krupni plodovi čvrstog mesa i ugodne arome. Dorijeva rano i odlična je za svježu potrošnju.</td>
+                            <td>kg</td>
+                            <td class="price-cell">0,70 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stanley</strong></td>
+                            <td>Krupna kasna sorta, izrazito slatka i bogata suhom tvari. Savršena za kompot, pečenje i preradu.</td>
+                            <td>kg</td>
+                            <td class="price-cell">0,70 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Domaća Šljivovica</strong></td>
+                            <td>Tradicionalna slavonska rakija pečena od odabranih zrelih plodova bez dodanog šećera. Odležana.</td>
+                            <td>1 litra (staklenka)</td>
+                            <td class="price-cell">12,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note-box mt-4">
+                <p><strong>Napomena za kupce:</strong> Za narudžbe veće od 50 kg šljiva molimo vas da nas kontaktirate nekoliko dana unaprijed kako bismo osigurali svježe ubrane plodove na željeni dan.</p>
+            </div>
+        </section>
+
+
+        <section id="kontakt" class="page-section">
+            <div class="page-title">
+                <h2>Kontakt & Narudžba</h2>
+                <p>Pošaljite nam upit ili naručite svježe plodove izravno iz voćnjaka</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kontakt Informacije</h3>
+                    <p>Slobodno nas kontaktirajte telefonom, e-mailom ili posjetite naše imanje u Dragaliću.</p>
+
+                    <div class="info-item">
+                        <strong>Adresa:</strong> Dragalić bb, 35428 Dragalić (kod Nove Gradiške)
+                    </div>
+                    <div class="info-item">
+                        <strong>Telefon:</strong> 098 / 123 - 4567
+                    </div>
+                    <div class="info-item">
+                        <strong>E-mail:</strong> info@opg-bradasevic.hr
+                    </div>
+                    <div class="info-item">
+                        <strong>Radno vrijeme:</strong> Ponedjeljak - Subota: 08:00 - 19:00h
+                    </div>
+
+                    <div class="stored-orders mt-4">
+                        <h4>Vaše prethodne narudžbe (localStorage):</h4>
+                        <div id="localStorageOutput" class="storage-box">
+                            <p class="text-muted">Nemate spremljenih narudžbi na ovom uređaju.</p>
+                        </div>
+                        <button id="clearStorageBtn" class="btn btn-sm btn-outline mt-2">Očisti povijest narudžbi</button>
+                    </div>
+                </div>
+
+                <!-- ELEMENT FORME WITH JS VALIDATION -->
+                <div class="contact-form-container">
+                    <h3>Obrazac za Narudžbu / Upit</h3>
+                    
+                    <form id="orderForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="imePrezime">Ime i Prezime *</label>
+                            <input type="text" id="imePrezime" name="imePrezime" required placeholder="Npr. Ivan Horvat">
+                            <span class="error-message" id="errorIme">Molimo unesite vaše ime i prezime.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail adresa *</label>
+                            <input type="email" id="email" name="email" required placeholder="ime@primjer.hr">
+                            <span class="error-message" id="errorEmail">Unesite ispravnu e-mail adresu.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefon">Broj telefona *</label>
+                            <input type="tel" id="telefon" name="telefon" required placeholder="0981234567">
+                            <span class="error-message" id="errorTelefon">Unesite valjan broj telefona (min 6 znamenki).</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="proizvod">Odaberite proizvod *</label>
+                            <select id="proizvod" name="proizvod" required>
+                                <option value="">-- Odaberite iz ponude --</option>
+                                <option value="Čačanska rodna (0,70 €/kg)">Šljiva: Čačanska rodna (0,70 €/kg)</option>
+                                <option value="Čačanska ljepotica (0,70 €/kg)">Šljiva: Čačanska ljepotica (0,70 €/kg)</option>
+                                <option value="Stanley (0,70 €/kg)">Šljiva: Stanley (0,70 €/kg)</option>
+                                <option value="Domaća šljivovica (12,00 €/L)">Domaća šljivovica (12,00 €/L)</option>
+                            </select>
+                            <span class="error-message" id="errorProizvod">Molimo odaberite proizvod.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kolicina">Količina (kg ili litara) *</label>
+                            <input type="number" id="kolicina" name="kolicina" min="1" max="1000" required placeholder="Npr. 20">
+                            <span class="error-message" id="errorKolicina">Unesite količinu (minimalno 1).</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="poruka">Dodatna poruka ili napomena</label>
+                            <textarea id="poruka" name="poruka" rows="4" placeholder="Npr. Okvirno vrijeme preuzimanja..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Pošalji Narudžbu</button>
+                    </form>
+
+                    <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                        <strong>Hvala vam!</strong> Vaša narudžba je uspješno poslana i spremljena u lokalnu memoriju. Uskoro ćemo vas kontaktirati.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 OPG Brađašević - Dragalić, Nova Gradiška. Sva prava pridržana.</p>
+            <p><small>Izrađeno prema semantičkim HTML5 i CSS3 smjernicama | Vlastiti dizajn</small></p>
+        </div>
+    </footer>
+
+    
+    <script src="js/skripta.js"></script>
+</body>
+</html>
